@@ -1,0 +1,29 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import NotFoundPage from "../page/not-found/not-found.page"
+// import LoginPage from "../page/login/login.page"
+// import ProtectedRoute from "./protected.route"
+import HomePage from "../page/home/home.page";
+// import PublicRoute from "./public.route"
+import { RouteUrl } from "./url";
+
+export default function RootRouter() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path={RouteUrl.HOME} element={<HomePage />} />
+          {/* <Route
+                        path={RouteUrl.LOGIN}
+                        element={
+                            <PublicRoute>
+                                <LoginPage />
+                            </PublicRoute>
+                        }
+                    /> */}
+
+          {/* <Route path={RouteUrl.NOT_FOUND} element={<NotFoundPage />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
