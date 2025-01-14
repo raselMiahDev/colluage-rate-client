@@ -1,5 +1,5 @@
 import MyHeader from "../common/header/header";
-// import Footer from "../common/my-footer"
+import Footer from "../common/footer/footer";
 interface IPageWrapper {
   hideHeader?: boolean;
   hideFooter?: boolean;
@@ -15,7 +15,7 @@ export default function PageWrapper({
     <div>
       {!hideHeader && <MyHeader />}
       <div className="">{children}</div>
-      {!hideFooter && "Footer"}
+      {!hideFooter && <Footer />}
     </div>
   );
 }
