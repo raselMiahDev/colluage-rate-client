@@ -43,7 +43,7 @@ export default function HeaderOne() {
 
         {/* lOGIN | SIGNUP BUTTON*/}
         <div className="flex items-center space-x-5 md:flex">
-          <Link to={RouteUrl.LOGIN}>Log In</Link>
+          <Link to={RouteUrl.SEARCH_RESULT}>Log In</Link>
           <Link
             to={RouteUrl.REGISTER}
             className="bg-blue-600 hover:bg-blue-700 py-2 px-5 rounded-lg text-white"

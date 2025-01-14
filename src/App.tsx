@@ -1,9 +1,9 @@
-import HomePage from "./view/page/home/home.page";
+import RootRouter from "./view/router/root.router";
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <RootRouter />
     </div>
   );
 }
