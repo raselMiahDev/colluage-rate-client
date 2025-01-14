@@ -21,7 +21,7 @@ const WhyFreshWorkplace = () => {
   ];
 
   return (
-    <section className=" py-12 px-4">
+    <section className="py-12 px-4">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8">Why FreshWorkplace?</h2>
         <div className="grid md:grid-cols-3 gap-6">
