@@ -1,8 +1,7 @@
 import React from "react";
-
 const SearchBar: React.FC = () => {
   return (
-    <div className="w-full py-6 bg-white">
+    <div className="w-full py-6">
       {/* Header */}
       <h2 className="text-xl font-semibold mb-4">
         740 Employees with <span className="text-blue-500">"Hasan"</span> in

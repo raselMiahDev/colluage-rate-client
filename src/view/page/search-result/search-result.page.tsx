@@ -29,14 +29,29 @@ export default function SearchResultPage() {
   ];
   return (
     <PageWrapper>
-      <ContainerSectionWrapper>
-        <SearchBar />
-        <div className="space-y-4">
-          {employees.map((employee, index) => (
-            <EmployeeCard key={index} {...employee} />
-          ))}
-        </div>
-      </ContainerSectionWrapper>
+      <div className="bg-slate-100">
+        <ContainerSectionWrapper>
+          <div className="grid md:grid-cols-12 gap-7">
+            <div className="md:col-span-9">
+              <SearchBar />
+              <div className="space-y-4">
+                {employees.map((employee, index) => (
+                  <EmployeeCard key={index} {...employee} />
+                ))}
+              </div>
+            </div>
+
+            <div className="md:col-span-3 md:mt-32 border text-center p-4 rounded-lg h-44 bg-white">
+              <h1 className="text-2xl font-bold pb-7">
+                Don't see <br /> your Colleague?
+              </h1>
+              <button className="bg-blue-500 text-white w-full rounded-md py-2">
+                Add Now
+              </button>
+            </div>
+          </div>
+        </ContainerSectionWrapper>
+      </div>
     </PageWrapper>
   );
 }
