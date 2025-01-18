@@ -1,5 +1,7 @@
 import React from "react";
 import { BsSave2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { RouteUrl } from "../../../router/url";
 type EmployeeCardProps = {
   name: string;
   currentRole: string;
@@ -31,7 +33,9 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
         <div className="w-24 h-24 bg-gray-300 rounded-md"></div>
       </div>
       <div className="flex-1 ml-4">
-        <h3 className="text-lg font-bold">{name}</h3>
+        <Link to={RouteUrl.SINGLE_PROFILE} className="text-lg font-bold">
+          {name}
+        </Link>
         <p className="text-sm text-gray-600">
           Works at <span className="font-bold">{company}</span> as{" "}
           <span className="font-bold">{currentRole}</span>
