@@ -1,53 +1,9 @@
 import { Link } from "react-router-dom";
 import StartYourSearch from "../../../page/home/start-your-search";
-import { FaFacebook } from "react-icons/fa";
-import { CiInstagram } from "react-icons/ci";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { IoLogoTiktok } from "react-icons/io5";
-import { FaYoutube } from "react-icons/fa";
-
+import SocialMedia from "../social-media";
 export default function Footer() {
-  const socialMedia = [
-    {
-      id: "1",
-      name: "Facebook",
-      icon: <FaFacebook />,
-      link: "www.facebook.com",
-    },
-    {
-      id: "2",
-      name: "Instagram",
-      icon: <CiInstagram />,
-      link: "www.instagram.com",
-    },
-    {
-      id: "3",
-      name: "Linkedin",
-      icon: <FaLinkedin />,
-      link: "www.linkedin.com",
-    },
-    {
-      id: "4",
-      name: "Twitter",
-      icon: <FaTwitter />,
-      link: "www.twitter.com",
-    },
-    {
-      id: "5",
-      name: "Tiktok",
-      icon: <IoLogoTiktok />,
-      link: "www.tiktok.com",
-    },
-    {
-      id: "6",
-      name: "Youtube",
-      icon: <FaYoutube />,
-      link: "www.youtube.com",
-    },
-  ];
   return (
-    <footer className="text-gray-700 py-8 ">
+    <footer className="text-gray-700 pb-8">
       <div className="">
         {/* Call to Action */}
         <StartYourSearch />
@@ -145,18 +101,8 @@ export default function Footer() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="text-center mt-8">
-          <div className="flex justify-center space-x-5">
-            {socialMedia.map((social) => (
-              <a
-                href={social.link}
-                key={social.id}
-                className="text-gray-800 hover:text-blue-500 text-2xl border border-gray-600 rounded-md p-2"
-              >
-                {social.icon}
-              </a>
-            ))}
-          </div>
+        <div className="flex justify-center pt-8">
+          <SocialMedia />
         </div>
 
         {/* Copyright Section */}

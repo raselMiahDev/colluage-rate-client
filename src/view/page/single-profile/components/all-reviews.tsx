@@ -1,4 +1,8 @@
 import React from "react";
+import Avater from "../../../../assets/avater.svg";
+import { CiSquareInfo } from "react-icons/ci";
+import { TbArrowBigUpLine, TbArrowBigDownLine } from "react-icons/tb";
+import RatingCard from "./rating-card";
 
 const AllReviews: React.FC = () => {
   const reviews = [
@@ -7,7 +11,19 @@ const AllReviews: React.FC = () => {
       reviewer: "Ruhul Amin",
       role: "Supervisor",
       workplace: "Works at Codex IT together",
-      ratings: [4, 4, 4, 4, 4],
+      ratings: [3, 5, 3, 5, 1],
+      ratSubject: "Fairnes",
+      reviewText:
+        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.",
+      date: "June 18, 2024",
+    },
+    {
+      id: 2,
+      reviewer: "Amin",
+      role: "Supervisor",
+      workplace: "Works at Codex IT together",
+      ratings: [3, 5, 3, 5, 1],
+      ratSubject: "Fairnes",
       reviewText:
         "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s.",
       date: "June 18, 2024",
@@ -15,39 +31,64 @@ const AllReviews: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow p-6 mt-6">
-      <h3 className="text-lg font-bold">10 Reviews</h3>
-      {reviews.map((review) => (
-        <div key={review.id} className="border-t border-gray-300 py-4">
-          <div className="flex items-center gap-4">
-            <img
-              src="/assets/reviewer.jpg"
-              alt="Reviewer"
-              className="w-12 h-12 rounded-full"
-            />
-            <div>
-              <h4 className="font-bold">{review.reviewer}</h4>
-              <p className="text-gray-600">{review.role}</p>
+    <div className="py-7">
+      <div className="flex justify-between items-center">
+        <span className="text-2xl font-bold border-b-2 border-black">
+          10 Reviews
+        </span>
+        <div>
+          <label htmlFor="">Sort By</label> <br />
+          <select
+            name=""
+            id=""
+            className="w-56 border py-1 px-2 rounded-md text-slate-500 focus:outline-none"
+          >
+            <option value="new">New</option>
+            <option value="new">Latest</option>
+          </select>
+        </div>
+      </div>
+      <div className=" ">
+        {reviews.map((review) => (
+          <div className="bg-white rounded-lg border p-6 my-6" key={review.id}>
+            <div className="flex items-start gap-4">
+              <img src={Avater} alt="Reviewer" className="w-20 h-20 rounded" />
+              <div>
+                <div>
+                  <div className="flex justify-between">
+                    <h4 className="font-bold text-xl">{review.reviewer}</h4>
+                    <p className="text-sm">{review.date}</p>
+                  </div>
+                  <p className="font-bold text-sm">{review.role}</p>
+                  <p className="mt-2 text-gray-600">{review.workplace}</p>
+                </div>
+                <div className="md:flex gap-5 py-5 mb-3">
+                  {review.ratings.map((rating) => (
+                    <RatingCard
+                      rating={rating}
+                      ratingField={review.ratSubject}
+                    />
+                  ))}
+                </div>
+                <p className="mb-5">{review.reviewText}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex gap-6">
+                    <div className="flex gap-3 items-center text-lg">
+                      <TbArrowBigUpLine />
+                      <button className=" hover:underline">Appreciate</button>
+                    </div>
+                    <div className="flex gap-3 items-center text-lg">
+                      <TbArrowBigDownLine />
+                      <button className="hover:underline">Doubtful</button>
+                    </div>
+                  </div>
+                  <CiSquareInfo size={25} />
+                </div>
+              </div>
             </div>
           </div>
-          <p className="mt-2 text-gray-600">{review.workplace}</p>
-          <div className="flex gap-2 mt-2">
-            {review.ratings.map((rating, index) => (
-              <span key={index} className="text-yellow-500">
-                {rating}★
-              </span>
-            ))}
-          </div>
-          <p className="mt-2">{review.reviewText}</p>
-          <div className="flex gap-4 mt-2">
-            <button className="text-blue-500 hover:underline">
-              Appreciate
-            </button>
-            <button className="text-blue-500 hover:underline">Doubtful</button>
-          </div>
-          <p className="text-gray-400 text-sm">{review.date}</p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
