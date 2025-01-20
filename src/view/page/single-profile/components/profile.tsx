@@ -2,6 +2,8 @@ import React from "react";
 import Avater from "../../../../assets/avater.svg";
 import { CiBookmark } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { RouteUrl } from "../../../router/url";
 
 const Profile: React.FC = () => {
   return (
@@ -10,7 +12,7 @@ const Profile: React.FC = () => {
         <img src={Avater} alt="Profile" className="w-22 h-30 rounded-md" />
         <div className="pt-7">
           <button className="bg-[#006BFF] text-white py-3 px-5 rounded-md hover:bg-blue-600 flex space-x-2 items-center">
-            <span>Rate Now</span>
+            <Link to={RouteUrl.RATING}>Rate Now</Link>
             <FaArrowRight />
           </button>
         </div>
