@@ -3,6 +3,7 @@ import Avater from "../../../../assets/avater.svg";
 import { CiSquareInfo } from "react-icons/ci";
 import { TbArrowBigUpLine, TbArrowBigDownLine } from "react-icons/tb";
 import RatingCard from "./rating-card";
+import { FaStar } from "react-icons/fa";
 
 const AllReviews: React.FC = () => {
   const reviews = [
@@ -52,7 +53,18 @@ const AllReviews: React.FC = () => {
         {reviews.map((review) => (
           <div className="bg-white rounded-lg border p-6 my-6" key={review.id}>
             <div className="flex items-start gap-4">
-              <img src={Avater} alt="Reviewer" className="w-20 h-20 rounded" />
+              <div>
+                <img
+                  src={Avater}
+                  alt="Reviewer"
+                  className="w-22 h-22 rounded"
+                />
+                <div className="bg-[#22C55E] text-white text-center px-4 py-2 text-2xl mt-8 font-bold rounded flex items-center space-x-2">
+                  {" "}
+                  <span>4.5</span>
+                  <FaStar className="text-yellow-400" />
+                </div>
+              </div>
               <div>
                 <div>
                   <div className="flex justify-between">

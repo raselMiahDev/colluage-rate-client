@@ -10,7 +10,7 @@ import SocialMedia from "../../components/common/social-media";
 const SingleProfilePage: React.FC = () => {
   return (
     <PageWrapper>
-      <div className="bg-slate-100">
+      <div className="bg-slate-50">
         <ContainerSectionWrapper>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="md:col-span-2">
