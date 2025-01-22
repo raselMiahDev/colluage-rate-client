@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export default function StartYourSearch() {
   return (
-    <div className="bg-gray-100 py-8">
+    <div className="bg-gray-200 py-8">
       <div className="text-center mb-8">
         <h2 className="text-lg font-bold">Start Your Search</h2>
         <p className="text-sm text-gray-500 mb-6">

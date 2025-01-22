@@ -8,6 +8,7 @@ import { RouteUrl } from "./url";
 import SearchResultPage from "../page/search-result/search-result.page";
 import SingleProfilePage from "../page/single-profile/single-profile.page";
 import RatingPage from "../page/rating/rating.page";
+import ReportPage from "../page/report/report.page";
 
 export default function RootRouter() {
   return (
@@ -17,6 +18,7 @@ export default function RootRouter() {
           <Route path={RouteUrl.HOME} element={<HomePage />} />
           <Route path={RouteUrl.SEARCH_RESULT} element={<SearchResultPage />} />
           <Route path={RouteUrl.RATING} element={<RatingPage />} />
+          <Route path={RouteUrl.REPORT} element={<ReportPage />} />
           <Route
             path={RouteUrl.SINGLE_PROFILE}
             element={<SingleProfilePage />}

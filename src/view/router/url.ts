@@ -7,5 +7,6 @@ export const RouteUrl = {
     SEARCH_RESULT: "/search-result",
     SINGLE_PROFILE:"/single-profile",
     RATING:"/rating",
+    REPORT:"/report",
     NOT_FOUND: "*",
 } as const
