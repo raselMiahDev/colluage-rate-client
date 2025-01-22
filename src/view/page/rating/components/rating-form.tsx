@@ -138,14 +138,14 @@ const RatingForm: React.FC = () => {
       </div>
 
       {/* Ratings */}
-      <div className=" p-5 border rounded-md">
+      <div className="">
         <div className="grid grid-cols-2 gap-4">
           {Object.keys(formData.ratings).map((key) => (
-            <div key={key} className="space-y-1">
+            <div key={key} className="bg-white p-5 border rounded-md">
               <span className="block text-md font-medium text-gray-700 capitalize">
                 {key.replace(/([A-Z])/g, " $1").trim()}
               </span>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-2 pt-4">
                 {[1, 2, 3, 4, 5].map((value) => (
                   <button
                     type="button"
@@ -156,7 +156,7 @@ const RatingForm: React.FC = () => {
                         ? "bg-yellow-400"
                         : "bg-gray-200"
                     }`}
-                    onClick={() => handleRatingChange(key, value)}
+                    onChange={() => handleRatingChange(key, value)}
                   >
                     {value}
                   </button>
@@ -196,3 +196,28 @@ const RatingForm: React.FC = () => {
   );
 };
 export default RatingForm;
+
+// {Object.keys(formData.ratings).map((key) => (
+//   <div key={key} className="space-y-1">
+//     <span className="block text-md font-medium text-gray-700 capitalize">
+//       {key.replace(/([A-Z])/g, " $1").trim()}
+//     </span>
+//     <div className="flex items-center space-x-1">
+//       {[1, 2, 3, 4, 5].map((value) => (
+//         <button
+//           type="button"
+//           key={value}
+//           className={`w-8 h-8 rounded-full ${
+//             formData.ratings[key as keyof typeof formData.ratings] >=
+//             value
+//               ? "bg-yellow-400"
+//               : "bg-gray-200"
+//           }`}
+//           onClick={() => handleRatingChange(key, value)}
+//         >
+//           {value}
+//         </button>
+//       ))}
+//     </div>
+//   </div>
+// ))}
