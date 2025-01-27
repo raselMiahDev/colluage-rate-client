@@ -10,7 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="bg-[#18191C] text-white py-12 px-4 md:px-16 relative rounded-2xl">
+    <section className="bg-[#18191C] text-white py-12 px-4 md:px-16 relative rounded-none md:rounded-2xl">
       <div className="text-center max-w-2xl mx-auto">
         <button className="bg-blue-500 text-white py-1 px-3 rounded-full text-sm uppercase font-semibold mb-4">
           Rate Your Colleague

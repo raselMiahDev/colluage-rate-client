@@ -30,7 +30,7 @@ export default function SearchResultPage() {
   return (
     <PageWrapper>
       <div className="bg-slate-100">
-        <ContainerSectionWrapper>
+        <ContainerSectionWrapper className="px-10 md:px-0">
           <div className="grid md:grid-cols-12 gap-7">
             <div className="md:col-span-9">
               <SearchBar />

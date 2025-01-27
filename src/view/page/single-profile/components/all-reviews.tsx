@@ -4,6 +4,8 @@ import { CiSquareInfo } from "react-icons/ci";
 import { TbArrowBigUpLine, TbArrowBigDownLine } from "react-icons/tb";
 import RatingCard from "./rating-card";
 import { FaStar } from "react-icons/fa";
+//import ContainerSectionWrapper from "../../../components/layout/container-section-wrapper.comp";
+import FullSectionWrapper from "./../../../components/layout/full-section-wrapper";
 
 const AllReviews: React.FC = () => {
   const reviews = [
@@ -32,7 +34,7 @@ const AllReviews: React.FC = () => {
   ];
 
   return (
-    <div className="py-7">
+    <FullSectionWrapper className="px-10 md:px-0">
       <div className="flex justify-between items-center">
         <span className="text-2xl font-bold border-b-2 border-black">
           10 Reviews
@@ -101,7 +103,7 @@ const AllReviews: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+    </FullSectionWrapper>
   );
 };
 

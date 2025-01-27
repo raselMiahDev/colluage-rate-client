@@ -2,6 +2,7 @@ import React from "react";
 import { BsSave2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { RouteUrl } from "../../../router/url";
+import Avater from "../../../../assets/avater.svg";
 type EmployeeCardProps = {
   name: string;
   currentRole: string;
@@ -27,10 +28,12 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
     rating >= 4 ? "bg-green-500" : rating >= 3 ? "bg-yellow-500" : "bg-red-500";
 
   return (
-    <div className="bg-white flex items-center border p-5 rounded-lg">
+    <div className="bg-white flex items-start md:items-center border p-5 rounded-lg">
       <div className="flex-shrink-0">
         {/* Placeholder for image */}
-        <div className="w-24 h-24 bg-gray-300 rounded-md"></div>
+        <div className="w-24 h-24 bg-gray-300 rounded-md">
+          <img src={Avater} alt="avater" />
+        </div>
       </div>
       <div className="flex-1 ml-4">
         <Link to={RouteUrl.SINGLE_PROFILE} className="text-lg font-bold">
