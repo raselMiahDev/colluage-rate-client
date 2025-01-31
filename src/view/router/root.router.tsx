@@ -11,6 +11,7 @@ import AboutYouPage from "../page/about-you/about-you.page";
 import { useLoading } from "../../contexts/loading-context";
 import { useEffect } from "react";
 import LoadingSpinner from "../components/common/loading-spinner";
+import UserProfilePage from "../page/user-profile/user-profile.page";
 
 export default function RootRouter() {
   const location = useLocation();
@@ -33,6 +34,7 @@ export default function RootRouter() {
         <Route path={RouteUrl.SIGN_UP} element={<SignUpPage />} />
         <Route path={RouteUrl.ABOUT_YOU} element={<AboutYouPage />} />
         <Route path={RouteUrl.SINGLE_PROFILE} element={<SingleProfilePage />} />
+        <Route path={RouteUrl.PROFILE} element={<UserProfilePage />} />
       </Routes>
     </>
   );

@@ -1,5 +1,5 @@
 import { z } from "zod"
-import { Constant } from "../config/constant/common.constant"
+import { Constant } from "../config/constants/common.constant"
 
 export const ZodNameString = z
     .string()
