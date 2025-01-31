@@ -16,7 +16,7 @@ export default function HeaderOne() {
         isScrolled ? "fixed top-0 left-0 w-full bg-white shadow-lg" : "relative"
       }`}
     >
-      <div className=" flex items-center justify-between px-10 md:px-40 py-3 border-b dark:border-gray-700">
+      <div className=" flex items-center justify-between px-10 md:px-40 py-3 dark:border-gray-700">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <div>
@@ -43,9 +43,9 @@ export default function HeaderOne() {
 
         {/* lOGIN | SIGNUP BUTTON*/}
         <div className="flex items-center space-x-5 md:flex">
-          <Link to={RouteUrl.SEARCH_RESULT}>Log In</Link>
+          <Link to={RouteUrl.LOGIN}>Log In</Link>
           <Link
-            to={RouteUrl.REGISTER}
+            to={RouteUrl.SIGN_UP}
             className="bg-blue-600 hover:bg-blue-700 py-2 px-5 rounded-lg text-white"
           >
             Sign Up
