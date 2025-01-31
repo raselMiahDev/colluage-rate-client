@@ -5,10 +5,12 @@ import WhyFreshWorkplace from "./components/why-fresh-workplace";
 import TrustTransparency from "./components/trust-transparency";
 import HowItWorks from "./components/how-it-works";
 import CommunityImpact from "./components/community-impact";
+import HelmetCon from "../../components/common/helmet-con";
 
 const HomePage = () => {
   return (
     <PageWrapper>
+      <HelmetCon title="Home" />
       <ContainerSectionWrapper>
         <HeroSection />
         <WhyFreshWorkplace />

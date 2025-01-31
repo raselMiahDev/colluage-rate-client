@@ -1,3 +1,4 @@
+import HelmetCon from "../../components/common/helmet-con";
 import FullSectionWrapper from "../../components/layout/full-section-wrapper";
 import PageWrapper from "../../components/layout/page-wrapper";
 import ReportForm from "./components/report-form";
@@ -5,6 +6,7 @@ import ReportForm from "./components/report-form";
 const ReportPage = () => {
   return (
     <PageWrapper>
+      <HelmetCon title="Report Colleagues" />
       <div className="bg-slate-100">
         <FullSectionWrapper>
           <h1 className="text-xl md:text-3xl text-center py-8">

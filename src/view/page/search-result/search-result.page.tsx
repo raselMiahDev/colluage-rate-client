@@ -1,3 +1,4 @@
+import HelmetCon from "../../components/common/helmet-con";
 import ContainerSectionWrapper from "../../components/layout/container-section-wrapper.comp";
 import PageWrapper from "../../components/layout/page-wrapper";
 import EmployeeCard from "./components/employee-card";
@@ -29,6 +30,7 @@ export default function SearchResultPage() {
   ];
   return (
     <PageWrapper>
+      <HelmetCon title="Search Result" />
       <div className="bg-slate-100">
         <ContainerSectionWrapper className="px-10 md:px-0">
           <div className="grid md:grid-cols-12 gap-7">

@@ -1,3 +1,4 @@
+import HelmetCon from "../../components/common/helmet-con";
 import ContainerSectionWrapper from "../../components/layout/container-section-wrapper.comp";
 import PageWrapper from "../../components/layout/page-wrapper";
 import AboutYouForm from "./components/about-you.form";
@@ -5,6 +6,7 @@ import AboutYouForm from "./components/about-you.form";
 const AboutYouPage = () => {
   return (
     <PageWrapper>
+      <HelmetCon title="About You" />
       <ContainerSectionWrapper>
         <div className="space-y-5">
           <h1 className="text-3xl font-bold">Almost There</h1>
