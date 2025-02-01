@@ -47,3 +47,4 @@ export const ZodOnlyDateString = z
     .transform((value) => {
         return value.split("T")[0]
     })
+export const ZodBoolean = z.boolean()
