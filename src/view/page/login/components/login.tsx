@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { RouteUrl } from "../../../router/url";
+import { GoogleLogin } from "@react-oauth/google";
+import { LoginController } from "../login.controller";
 
 const Login = () => {
+  const { onSuccess, onError } = LoginController();
   return (
     <div className="max-w-5xl space-y-7">
       <h1 className="text-2xl font-bold">Welcome Back</h1>
@@ -11,7 +14,7 @@ const Login = () => {
       </p>
 
       <div>
-        <button>Sign in with Google</button>
+        <GoogleLogin onSuccess={onSuccess} onError={onError} />
       </div>
       <div>
         <p>

@@ -3,7 +3,10 @@ import { CiBookmark } from "react-icons/ci";
 import { FaEdit } from "react-icons/fa";
 import SocialMedia from "../../../components/common/social-media";
 import EditProfileForm from "./edit-profile-form";
+import { useAuthStore } from "../../../../store/user.store";
 const MyProfile = () => {
+  const { user } = useAuthStore();
+  console.log(user);
   return (
     <div className="bg-white gap-7 border rounded-lg p-6">
       <div className="grid md:grid-cols-5">
@@ -13,7 +16,7 @@ const MyProfile = () => {
         <div className="space-y-4 col-span-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <h2 className="text-3xl font-bold">Rakibul Hasan</h2>
+              <h2 className="text-3xl font-bold">{user?.name}</h2>
               <CiBookmark size={24} color="#4B465C" />
             </div>
             <div className="p-2 border rounded-lg">
