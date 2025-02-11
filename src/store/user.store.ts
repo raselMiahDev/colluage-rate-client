@@ -1,29 +1,21 @@
 import { create } from "zustand"
+import { ICurrentUser } from "../service/login/login.dto"
 
-interface User {
-    aud: string
-    azp: string
-    email: string
-    email_verified: boolean
-    exp: number
-    given_name: string
-    iat: number
-    iss: string
-    jti: string
-    name: string
-    nbf: number
-    picture: string
-    sub: string
-}
 
 interface AuthState {
-    user: User | null;
-    setUser: (user: User | null) => void;
+    user: ICurrentUser | null;
+    setUser: (user: ICurrentUser | null) => void;
     logout: () => void;
 }
 
 export const useAuthStore = create<AuthState>((set) => ({
-    user: null,
-    setUser: (user) => set({ user }),
-    logout: () => set({ user: null })
+    user: JSON.parse(localStorage.getItem("user") || "null"),
+    setUser: (user) => {
+        localStorage.setItem("user", JSON.stringify(user));
+        set({ user })
+    },
+    logout: () => {
+        localStorage.removeItem("user");
+        set({ user: null })
+    }
 }))

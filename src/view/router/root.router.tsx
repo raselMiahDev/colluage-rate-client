@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import LoadingSpinner from "../components/common/loading-spinner";
 import UserProfilePage from "../page/user-profile/user-profile.page";
 import NotFoundPage from "../page/not-found/not-found.page";
-
+import ProtectedRoute from "./protected.route";
 export default function RootRouter() {
   const location = useLocation();
   const { loading, setLoading } = useLoading();
@@ -29,7 +29,14 @@ export default function RootRouter() {
       <Routes>
         <Route path={RouteUrl.HOME} element={<HomePage />} />
         <Route path={RouteUrl.SEARCH_RESULT} element={<SearchResultPage />} />
-        <Route path={RouteUrl.RATING} element={<RatingPage />} />
+        <Route
+          path={RouteUrl.RATING}
+          element={
+            <ProtectedRoute>
+              <RatingPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path={RouteUrl.REPORT} element={<ReportPage />} />
         <Route path={RouteUrl.LOGIN} element={<LoginPage />} />
         <Route path={RouteUrl.SIGN_UP} element={<SignUpPage />} />
