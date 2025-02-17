@@ -3,31 +3,11 @@ import ContainerSectionWrapper from "../../components/layout/container-section-w
 import PageWrapper from "../../components/layout/page-wrapper";
 import EmployeeCard from "./components/employee-card";
 import SearchBar from "./components/search-bar";
+import { SearchResultController } from "./search-result.controller";
 
 export default function SearchResultPage() {
-  const employees = [
-    {
-      name: "Rakibul Hasan",
-      currentRole: "IT Manager",
-      company: "Codex IT",
-      previousRole: "Frontend Developer",
-      previousCompany: "Mathosagar IT Solution",
-      rating: 4.5,
-      reviews: 10,
-      attributes: ["98% Would work again", "Known for Leadership"],
-    },
-    {
-      name: "Rakibul Hasan",
-      currentRole: "IT Manager",
-      company: "Codex IT",
-      previousRole: "Frontend Developer",
-      previousCompany: "Mathosagar IT Solution",
-      rating: 1.5,
-      reviews: 10,
-      attributes: ["98% Would work again", "Known for Leadership"],
-    },
-    // Add more employee objects here...
-  ];
+  const { filteredResults } = SearchResultController();
+  console.log(filteredResults);
   return (
     <PageWrapper>
       <HelmetCon title="Search Result" />
@@ -37,9 +17,13 @@ export default function SearchResultPage() {
             <div className="md:col-span-9">
               <SearchBar />
               <div className="space-y-4">
-                {employees.map((employee, index) => (
-                  <EmployeeCard key={index} {...employee} />
-                ))}
+                {filteredResults.length > 0 ? (
+                  filteredResults.map((employee, index) => (
+                    <EmployeeCard key={index} {...employee} />
+                  ))
+                ) : (
+                  <p>No result found</p>
+                )}
               </div>
             </div>
 

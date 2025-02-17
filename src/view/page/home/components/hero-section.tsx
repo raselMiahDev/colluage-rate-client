@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHeaderController } from "../header.controller";
+import { useHeaderController } from "../home.controller";
 
 export default function HeroSection() {
   const { searchColleague } = useHeaderController();

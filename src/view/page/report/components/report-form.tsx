@@ -1,4 +1,8 @@
+import { MyInputWithRHF } from "../../../components/common/my-input.comp";
+import { ReportController } from "../report.controller";
+
 const ReportForm = () => {
+  const { control, handleSubmit, isSubmitting } = ReportController();
   return (
     <div className="bg-white p-5 max-w-5xl mx-auto space-y-6 rounded-lg border">
       <div className="bg-slate-100 p-4 rounded-lg">
@@ -21,19 +25,25 @@ const ReportForm = () => {
         </p>
       </div>
       <div className=" rounded-lg">
-        <textarea
-          name="report"
-          id="report"
-          cols={30}
-          rows={10}
+        <MyInputWithRHF
+          name="comments"
+          isTextArea={true}
+          label=""
           placeholder="Tell us whats wrong this comments ..."
-          className="border bg-slate-50 w-full rounded-lg p-4"
+          control={control}
         />
         <span>0/350</span>
       </div>
       <div className="">
-        <button className="w-full bg-[#006BFF] text-white p-2 rounded-lg hover:bg-blue-500">
-          Submit Report
+        <button
+          onClick={() => {
+            handleSubmit();
+          }}
+          disabled={isSubmitting}
+          type="submit"
+          className="w-full p-3 bg-[#006BFF] text-white rounded-lg hover:bg-blue-500"
+        >
+          {isSubmitting ? "Submiting..." : "Submit Report"}
         </button>
       </div>
     </div>
