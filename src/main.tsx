@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")!).render(
     <HelmetProvider>
       <BrowserRouter>
         <LoadingProvider>
-          <GoogleOAuthProvider clientId="679021578353-j772nuso5ct1penjtkihci44455tfb5u.apps.googleusercontent.com">
+          <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_KEY}>
             <App />
           </GoogleOAuthProvider>
         </LoadingProvider>
