@@ -1,6 +1,6 @@
 import { AxiosError } from "axios"
-import { StatusCode } from "../config/constant/code.constant"
-import { MessageConstant } from "../config/constant/message.constant"
+import { StatusCode } from "../config/constants/code.constant"
+import { MessageConstant } from "../config/constants/message.constant"
 import { IErrorResponse } from "../service/_common/common.dto"
 
 export const ErrorUtil = {
