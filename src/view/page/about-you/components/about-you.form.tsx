@@ -2,7 +2,6 @@ import { useState } from "react";
 import TermsAndConditions from "./terms&conditions";
 import { MyInputWithRHF } from "../../../components/common/my-input.comp";
 import { AboutYouController } from "../about-you.controller";
-import PrivacyAlert from "../../../components/common/privacy-alert";
 
 const AboutYouForm = () => {
   const [showTerms, setShowTerms] = useState(false);
@@ -16,7 +15,6 @@ const AboutYouForm = () => {
         placeholder="Jhon"
         control={control}
       />
-      <PrivacyAlert />
       <MyInputWithRHF
         name="lastName"
         label="Last Name"
@@ -24,7 +22,6 @@ const AboutYouForm = () => {
         placeholder="Doh"
         control={control}
       />
-      <PrivacyAlert />
       <MyInputWithRHF
         name="currentCompany"
         label="Current Company Name"
@@ -32,7 +29,7 @@ const AboutYouForm = () => {
         placeholder="XYZ Private Ltd."
         control={control}
       />
-      <PrivacyAlert />
+
       <MyInputWithRHF
         name="currentDesignation"
         label="Current Designation"
@@ -40,7 +37,6 @@ const AboutYouForm = () => {
         placeholder="Web Developer"
         control={control}
       />
-      <PrivacyAlert />
       <MyInputWithRHF
         name="pastCompany"
         label="Past Company Name"
@@ -48,7 +44,7 @@ const AboutYouForm = () => {
         placeholder="XYZ Private Ltd."
         control={control}
       />
-      <PrivacyAlert />
+
       <MyInputWithRHF
         name="pastDesignation"
         label="Past Designation"
@@ -56,7 +52,6 @@ const AboutYouForm = () => {
         placeholder="Web Developer"
         control={control}
       />
-      <PrivacyAlert />
       <div className="flex items-center gap-2">
         <MyInputWithRHF
           name="agree"
