@@ -2,7 +2,8 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../../assets/logo.png";
 import { useHeaderController } from "./header.controller";
 import { useState } from "react";
-import { RouteUrl } from "../../../router/url";
+
+import UserMenu from "./user-menu";
 
 export default function HeaderOne() {
   const { isScrolled, routes } = useHeaderController();
@@ -16,11 +17,11 @@ export default function HeaderOne() {
         isScrolled ? "fixed top-0 left-0 w-full bg-white shadow-lg" : "relative"
       }`}
     >
-      <div className=" flex items-center justify-between px-10 md:px-40 py-3 dark:border-gray-700">
+      <div className=" flex items-center justify-between px-5 md:px-40 py-3 dark:border-gray-700">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <div>
-            <img src={Logo} alt="Logo" className="h-7 w-25" />
+            <img src={Logo} alt="Logo" className="h-7 w-16 md:h-7 md:w-25" />
           </div>
         </Link>
 
@@ -41,15 +42,8 @@ export default function HeaderOne() {
           ))}
         </nav>
 
-        {/* lOGIN | SIGNUP BUTTON*/}
-        <div className="flex items-center space-x-5 md:flex">
-          <Link to={RouteUrl.LOGIN}>Log In</Link>
-          <Link
-            to={RouteUrl.SIGN_UP}
-            className="bg-blue-600 hover:bg-blue-700 py-2 px-5 rounded-lg text-white"
-          >
-            Sign Up
-          </Link>
+        <div>
+          <UserMenu />
         </div>
 
         {/* Mobile Menu Button */}
@@ -95,7 +89,7 @@ export default function HeaderOne() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-white dark:bg-black transition-all duration-300 ease-in-out ${
+        className={`md:hidden absolute top-16 left-0 w-full bg-white transition-all duration-300 ease-in-out ${
           isMenuOpen
             ? "max-h-screen opacity-100 shadow-lg"
             : "max-h-0 opacity-0"
