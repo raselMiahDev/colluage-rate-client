@@ -6,12 +6,13 @@ import { LoadingProvider } from "./contexts/loading-context.tsx";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+const googleAuthKey = import.meta.env.VITE_GOOGLE_AUTH_KEY;
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
         <LoadingProvider>
-          <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_KEY}>
+          <GoogleOAuthProvider clientId={googleAuthKey}>
             <App />
           </GoogleOAuthProvider>
         </LoadingProvider>
