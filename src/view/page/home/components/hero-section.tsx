@@ -26,16 +26,16 @@ export default function HeroSection() {
       </div>
 
       <div className="flex justify-center">
-        <div className="flex items-center bg-white rounded-full shadow-md overflow-hidden w-full max-w-md">
+        <div className="flex items-center bg-white rounded-lg md:rounded-full shadow-md overflow-hidden w-full max-w-md">
           <input
             type="text"
             placeholder="Enter your colleague name"
-            className="flex-grow px-4 py-2 text-black outline-none"
+            className="flex-grow md:px-4 md:py-2 text-black outline-none"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
           <button
-            className="bg-blue-500 text-white px-6 py-2 font-medium hover:bg-blue-600"
+            className="bg-blue-500 text-white p-2 md:px-4 md:py-2 font-small hover:bg-blue-600"
             onClick={handleSearch}
           >
             Look Up Now
