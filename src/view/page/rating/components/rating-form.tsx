@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RatingController, FormData } from "../rating.controller";
-
+import RatingComponent from "./rating-components";
 const RatingForm: React.FC = () => {
   const controller = new RatingController();
   const [formData, setFormData] = useState<FormData>(controller.getFormData());
@@ -139,32 +139,10 @@ const RatingForm: React.FC = () => {
 
       {/* Ratings */}
       <div className="">
-        <div className="grid grid-cols-2 gap-4">
-          {Object.keys(formData.ratings).map((key) => (
-            <div key={key} className="bg-white p-5 border rounded-md">
-              <span className="block text-md font-medium text-gray-700 capitalize">
-                {key.replace(/([A-Z])/g, " $1").trim()}
-              </span>
-              <div className="flex items-center space-x-2 pt-4">
-                {[1, 2, 3, 4, 5].map((value) => (
-                  <button
-                    type="button"
-                    key={value}
-                    className={`w-8 h-8 rounded-full ${
-                      formData.ratings[key as keyof typeof formData.ratings] >=
-                      value
-                        ? "bg-yellow-400"
-                        : "bg-gray-200"
-                    }`}
-                    onChange={() => handleRatingChange(key, value)}
-                  >
-                    {value}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <RatingComponent
+          formData={formData}
+          handleRatingChange={handleRatingChange}
+        />
       </div>
 
       {/* Review */}

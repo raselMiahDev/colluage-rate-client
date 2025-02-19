@@ -4,7 +4,7 @@ import { RouteUrl } from "../../../router/url";
 import { useAuthStore } from "../../../../store/user.store";
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useAuthStore();
+  const { user, logout } = useAuthStore();
 
   return (
     <div className="relative">
@@ -28,7 +28,10 @@ const UserMenu = () => {
                 <li className="px-4 py-2 hover:bg-gray-100">
                   <Link to="/settings">Settings</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 text-red-500 cursor-pointer">
+                <li
+                  onClick={() => logout()}
+                  className="px-4 py-2 hover:bg-gray-100 text-red-500 cursor-pointer"
+                >
                   Logout
                 </li>
               </ul>
@@ -37,7 +40,6 @@ const UserMenu = () => {
         </div>
       ) : (
         <>
-          <p className="text-red-500">Please verify your email</p>
           <div className="flex items-center space-x-5 md:flex">
             <Link to={RouteUrl.LOGIN}>Log In</Link>
             <Link
