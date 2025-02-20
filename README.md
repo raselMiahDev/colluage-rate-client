@@ -1,51 +1,142 @@
-# React + TypeScript + Vite
+Colleagues Rating Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Colleagues Rating Web Application built using React, TypeScript, and Tailwind CSS. This application allows Google-authenticated users to create a profile, rate their colleagues on various skills and experiences, and report inappropriate ratings.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Google Authentication: Secure user authentication via Google OAuth.
 
-## Expanding the ESLint configuration
+User Profiles: Users can create and manage their profiles.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Colleague Rating: Rate colleagues on skills, experiences, and overall performance.
 
-- Configure the top-level `parserOptions` property like this:
+Report Ratings: Report and flag inappropriate or inaccurate ratings.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Responsive Design: Fully responsive and optimized for all devices.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Error Handling: Graceful error boundaries for enhanced user experience.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Tech Stack
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Frontend: React + TypeScript
 
-// change git auth
+UI Styling: Tailwind CSS
+
+State Management: Zustand
+
+Form Handling: React Hook Form + Zod
+
+API Communication: Axios
+
+Routing: React Router DOM
+
+Authentication: Google OAuth
+
+Validation: Zod
+
+Packages Used
+
+"@hookform/resolvers"
+"@react-oauth/google"
+"@tanstack/react-query"
+"axios"
+"clsx"
+"date-fns"
+"helmet"
+"jwt-decode"
+"react"
+"react-dom"
+"react-error-boundary"
+"react-helmet-async"
+"react-hook-form"
+"react-icons"
+"react-rating-stars-component"
+"react-router-dom"
+"react-toastify"
+"tailwind-merge"
+"zod"
+"zustand"
+
+Getting Started
+
+Prerequisites
+
+Ensure you have the following installed:
+
+Node.js (>= 18.x)
+
+pnpm (preferred package manager)
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/colleagues-rating-webapp.git
+cd colleagues-rating-webapp
+
+Install dependencies:
+
+pnpm install
+
+Set up environment variables:
+
+Create a .env file in the root directory:
+
+VITE_GOOGLE_CLIENT_ID=your-google-client-id
+VITE_API_BASE_URL=your-api-base-url
+
+Run the development server:
+
+pnpm dev
+
+Open the app:
+
+Visit http://localhost:5173 in your browser.
+
+Scripts
+
+Start Development Server:
+
+pnpm dev
+
+Build for Production:
+
+pnpm build
+
+Preview Production Build:
+
+pnpm preview
+
+Linting and Formatting:
+
+pnpm lint
+
+Folder Structure
+
+├── public
+├── src
+│   ├── components    // Reusable UI components
+│   ├── hooks         // Custom hooks
+│   ├── pages         // Page components (e.g., Home, Profile, etc.)
+│   ├── services      // API calls and services
+│   ├── store        // Zustand store for state management
+│   └── utils         // Utility functions
+└── .env              // Environment variables
+
+Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+Acknowledgements
+
+React
+
+Tailwind CSS
+
+Google OAuth
+
+Zustand
+
+React Hook Form
+
+⭐️ Star this repo if you find it helpful!
