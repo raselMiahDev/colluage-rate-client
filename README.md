@@ -2,22 +2,24 @@ Colleagues Rating Web Application
 
 A modern Colleagues Rating Web Application built using React, TypeScript, and Tailwind CSS. This application allows Google-authenticated users to create a profile, rate their colleagues on various skills and experiences, and report inappropriate ratings.
 
+Live Link : [colluagesrate.netlify.app](https://colluagesrate.netlify.app/)
 Features
+==========
 
-Google Authentication: Secure user authentication via Google OAuth.
+-Google Authentication: Secure user authentication via Google OAuth.
 
-User Profiles: Users can create and manage their profiles.
+-User Profiles: Users can create and manage their profiles.
 
-Colleague Rating: Rate colleagues on skills, experiences, and overall performance.
+-Colleague Rating: Rate colleagues on skills, experiences, and overall performance.
 
-Report Ratings: Report and flag inappropriate or inaccurate ratings.
+-Report Ratings: Report and flag inappropriate or inaccurate ratings.
 
-Responsive Design: Fully responsive and optimized for all devices.
+-Responsive Design: Fully responsive and optimized for all devices.
 
-Error Handling: Graceful error boundaries for enhanced user experience.
+-Error Handling: Graceful error boundaries for enhanced user experience.
 
 Tech Stack
-
+-------------
 Frontend: React + TypeScript
 
 UI Styling: Tailwind CSS
@@ -71,7 +73,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/yourusername/colleagues-rating-webapp.git
+git clone https://github.com/raselMiahDev/colluage-rate-client.git
 cd colleagues-rating-webapp
 
 Install dependencies:
@@ -94,49 +96,27 @@ Open the app:
 Visit http://localhost:5173 in your browser.
 
 Scripts
-
+========
 Start Development Server:
-
+------------------------
 pnpm dev
 
 Build for Production:
-
+---------------------
 pnpm build
 
 Preview Production Build:
-
+------------------------
 pnpm preview
 
 Linting and Formatting:
-
+-----------------------
 pnpm lint
 
-Folder Structure
-
-├── public
-├── src
-│   ├── components    // Reusable UI components
-│   ├── hooks         // Custom hooks
-│   ├── pages         // Page components (e.g., Home, Profile, etc.)
-│   ├── services      // API calls and services
-│   ├── store        // Zustand store for state management
-│   └── utils         // Utility functions
-└── .env              // Environment variables
 
 Contributing
+-------------
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-Acknowledgements
-
-React
-
-Tailwind CSS
-
-Google OAuth
-
-Zustand
-
-React Hook Form
 
 ⭐️ Star this repo if you find it helpful!
