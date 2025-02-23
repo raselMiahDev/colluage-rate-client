@@ -11,7 +11,7 @@ const SearchBar: React.FC = () => {
       {/* Filters */}
       <div className="flex flex-wrap gap-4">
         {/* Search Box */}
-        <div className="flex-1">
+        <div className="md:w-60 w-full">
           <input
             type="text"
             placeholder="Quick search for anyone"
@@ -20,7 +20,7 @@ const SearchBar: React.FC = () => {
         </div>
 
         {/* Department Dropdown */}
-        <div className="w-48">
+        <div className="md:w-60 w-full">
           <label>Department</label>
           <select className="w-full border border-gray-300 rounded-lg px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="IT & Software">IT & Software</option>
@@ -31,7 +31,7 @@ const SearchBar: React.FC = () => {
         </div>
 
         {/* Position Dropdown */}
-        <div className="w-48">
+        <div className="md:w-60 w-full">
           <label>Position</label>
           <select className="w-full border border-gray-300 rounded-lg px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="Manager">Manager</option>
@@ -42,7 +42,7 @@ const SearchBar: React.FC = () => {
         </div>
 
         {/* Company Dropdown */}
-        <div className="w-48">
+        <div className="md:w-60 w-full">
           <label>Company</label>
           <select className="w-full border border-gray-300 rounded-lg px-4 py-2 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="Codex IT">Codex IT</option>
