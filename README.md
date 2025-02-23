@@ -3,6 +3,7 @@ Colleagues Rating Web Application
 A modern Colleagues Rating Web Application built using React, TypeScript, and Tailwind CSS. This application allows Google-authenticated users to create a profile, rate their colleagues on various skills and experiences, and report inappropriate ratings.
 
 Live Link : [colluagesrate.netlify.app](https://colluagesrate.netlify.app/)
+
 Features
 ==========
 
