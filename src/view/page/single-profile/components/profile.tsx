@@ -18,7 +18,7 @@ const Profile: React.FC = () => {
         </div>
       </div>
       <div className="flex-grow">
-        <div className="flex items-center justify-between">
+        <div className="md:flex items-center justify-between">
           <div>
             <div className="flex space-x-3 items-center">
               <h2 className="text-3xl font-bold">Rakibul Hasan</h2>
@@ -33,7 +33,7 @@ const Profile: React.FC = () => {
             </p>
           </div>
           <div>
-            <div className="bg-[#22C55E] text-white px-4 py-2 text-2xl font-bold rounded">
+            <div className="bg-[#22C55E] text-white px-4 py-2 md:text-2xl text-xl font-bold rounded">
               {" "}
               4.5/5
             </div>

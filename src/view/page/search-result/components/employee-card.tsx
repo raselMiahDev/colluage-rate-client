@@ -28,14 +28,14 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
     rating >= 4 ? "bg-green-500" : rating >= 3 ? "bg-yellow-500" : "bg-red-500";
 
   return (
-    <div className="bg-white flex items-start md:items-center border p-5 rounded-lg">
+    <div className="bg-white md:flex items-start md:items-center border p-5 rounded-lg">
       <div className="flex-shrink-0">
         {/* Placeholder for image */}
         <div className="w-24 h-24 bg-gray-300 rounded-md">
           <img src={Avater} alt="avater" />
         </div>
       </div>
-      <div className="flex-1 ml-4">
+      <div className="flex-1 md:ml-4">
         <Link to={RouteUrl.SINGLE_PROFILE} className="text-lg font-bold">
           {name}
         </Link>
@@ -51,7 +51,7 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
           <span>{attributes.join(" | ")}</span>
         </div>
       </div>
-      <div className="flex flex-col items-center ml-4">
+      <div className="flex flex-col md:items-center md:ml-4 py-4 md:py-0">
         <div
           className={`text-white font-bold py-3 px-7 rounded-md text-md ${ratingColor}`}
         >
@@ -59,7 +59,7 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
         </div>
         <span className="text-xs text-gray-500 mt-1">{reviews} Reviews</span>
         <div className="mt-5">
-          <button className="bg-slate-100 border-2 p-2 rounded-lg flex items-center gap-2">
+          <button className="bg-slate-100 border-2 p-2 rounded-lg flex items-center justify-center gap-2 w-full ">
             <BsSave2 />
             <span>Save</span>
           </button>

@@ -54,7 +54,7 @@ const AllReviews: React.FC = () => {
       <div className=" ">
         {reviews.map((review) => (
           <div className="bg-white rounded-lg border p-6 my-6" key={review.id}>
-            <div className="flex items-start gap-4">
+            <div className="md:flex items-start gap-4">
               <div>
                 <img
                   src={Avater}
