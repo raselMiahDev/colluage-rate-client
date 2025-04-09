@@ -17,9 +17,9 @@ const RatingComponent: React.FC<RatingComponentProps> = ({
 }) => {
   return (
     <div className="">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="md:grid grid-cols-2 gap-4">
         {Object.keys(formData.ratings).map((key) => (
-          <div key={key} className="bg-white p-5 border rounded-md">
+          <div key={key} className="bg-white p-5 border">
             {/* Rating Label */}
             <span className="block text-md font-medium text-gray-700 capitalize">
               {key.replace(/([A-Z])/g, " $1").trim()}

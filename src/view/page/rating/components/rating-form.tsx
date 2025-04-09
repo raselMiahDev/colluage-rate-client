@@ -30,7 +30,7 @@ const RatingForm: React.FC = () => {
   return (
     <form className="max-w-5xl space-y-6" onSubmit={handleSubmit}>
       {/* Header */}
-      <div className="space-y-1">
+      <div className="space-y-1 px-6 md:px-0">
         <span className="text-slate-600">Rate</span>
         <h1 className="text-3xl font-bold text-gray-800">Rakibul Hasan</h1>
         <p className="text-sm text-gray-600">
@@ -39,7 +39,7 @@ const RatingForm: React.FC = () => {
         </p>
       </div>
 
-      <div>
+      <div className="px-6 md:px-0">
         <span className="border-b-2 border-black text-2xl font-bold">
           Questions
         </span>

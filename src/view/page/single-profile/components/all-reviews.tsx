@@ -35,8 +35,8 @@ const AllReviews: React.FC = () => {
 
   return (
     <FullSectionWrapper className="px-10 md:px-0">
-      <div className="flex justify-between items-center">
-        <span className="text-2xl font-bold border-b-2 border-black">
+      <div className="md:flex justify-between items-center space-y-5">
+        <span className="text-xl md:text-2xl font-bold border-b-2 border-black">
           10 Reviews
         </span>
         <div>
@@ -86,12 +86,14 @@ const AllReviews: React.FC = () => {
                 </div>
                 <p className="mb-5">{review.reviewText}</p>
                 <div className="flex items-center justify-between">
-                  <div className="flex gap-6">
-                    <div className="flex gap-3 items-center text-lg">
+                  <div className="flex gap-3 md:gap-6">
+                    <div className="flex gap-2 md:gap-3 items-center text-lg">
                       <TbArrowBigUpLine />
-                      <button className=" hover:underline">Appreciate</button>
+                      <button className=" hover:underline text-sm">
+                        Appreciate
+                      </button>
                     </div>
-                    <div className="flex gap-3 items-center text-lg">
+                    <div className="flex gap-2 items-center text-sm">
                       <TbArrowBigDownLine />
                       <button className="hover:underline">Doubtful</button>
                     </div>

@@ -1,8 +1,6 @@
 import { FaFacebook } from "react-icons/fa";
-import { CiInstagram } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { IoLogoTiktok } from "react-icons/io5";
 import { FaYoutube } from "react-icons/fa";
 const SocialMedia = () => {
   const socialMedia = [
@@ -11,12 +9,6 @@ const SocialMedia = () => {
       name: "Facebook",
       icon: <FaFacebook />,
       link: "www.facebook.com",
-    },
-    {
-      id: "2",
-      name: "Instagram",
-      icon: <CiInstagram />,
-      link: "www.instagram.com",
     },
     {
       id: "3",
@@ -31,12 +23,6 @@ const SocialMedia = () => {
       link: "www.twitter.com",
     },
     {
-      id: "5",
-      name: "Tiktok",
-      icon: <IoLogoTiktok />,
-      link: "www.tiktok.com",
-    },
-    {
       id: "6",
       name: "Youtube",
       icon: <FaYoutube />,
@@ -44,12 +30,12 @@ const SocialMedia = () => {
     },
   ];
   return (
-    <div className="flex space-x-5">
+    <div className="flex items-center justify-center space-x-2 md:space-x-5">
       {socialMedia.map((social) => (
         <a
           href={social.link}
           key={social.id}
-          className="text-gray-800 hover:bg-[#006BFF] hover:text-white transition ease-in-out duration-300 hover:border-white text-2xl border border-gray-600 rounded-md p-2"
+          className="text-gray-800 hover:bg-[#006BFF] hover:text-white transition ease-in-out duration-300 hover:border-white text-xl md:text-2xl border border-gray-600 rounded-md p-1 md:p-2"
         >
           {social.icon}
         </a>

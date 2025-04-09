@@ -1,8 +1,10 @@
 import React from "react";
+import ContainerSectionWrapper from "../../../components/layout/container-section-wrapper.comp";
 
 const ReviewsAndRatings: React.FC = () => {
   return (
-    <div className="bg-white rounded-lg shadow p-6">
+    <ContainerSectionWrapper>
+          <div className="bg-white rounded-lg shadow p-6">
       <h3 className="text-2xl font-bold">Reviews & Ratings</h3>
       <div>
         <div className="flex space-x-3 items-center border-b border-slate-400 py-7">
@@ -36,6 +38,7 @@ const ReviewsAndRatings: React.FC = () => {
         </div>
       </div>
     </div>
+    </ContainerSectionWrapper>
   );
 };
 
