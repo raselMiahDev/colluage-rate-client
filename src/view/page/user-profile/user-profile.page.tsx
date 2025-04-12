@@ -9,42 +9,40 @@ import HelmetCon from "../../components/common/helmet-con";
 
 export default function UserProfilePage() {
   const [activeTab, setActiveTab] = useState("tab1");
+
+  const tabItem = [
+    {
+      id: "tab1",
+      title: "My Profile",
+    },
+    {
+      id: "tab2",
+      title: "My Ratings",
+    },
+    {
+      id: "tab3",
+      title: "Saved",
+    },
+  ];
   return (
     <PageWrapper>
       <HelmetCon title="Profile" />
       <div className="bg-slate-50">
         <ContainerSectionWrapper>
           <div className="flex pb-6 space-x-5">
-            <button
-              className={`py-2 px-4 rounded flex gap-2 ${
-                activeTab === "tab1"
-                  ? "text-white bg-[#133955]"
-                  : "text-gray-600 bg-slate-200"
-              }`}
-              onClick={() => setActiveTab("tab1")}
-            >
-              My Profile
-            </button>
-            <button
-              className={`py-2 px-6 rounded ${
-                activeTab === "tab2"
-                  ? "text-[#dbdbdb] bg-[#133955]"
-                  : "text-gray-600 bg-slate-200"
-              }`}
-              onClick={() => setActiveTab("tab2")}
-            >
-              My Ratings
-            </button>
-            <button
-              className={`py-2 px-6 rounded ${
-                activeTab === "tab3"
-                  ? "text-[#dbdbdb] bg-[#133955]"
-                  : "text-gray-600 bg-slate-200"
-              }`}
-              onClick={() => setActiveTab("tab3")}
-            >
-              Saved
-            </button>
+            {tabItem.map((item) => (
+              <button
+                key={item.id}
+                className={`py-2 px-6 rounded ${
+                  activeTab === item.id
+                    ? "text-[#dbdbdb] bg-[#133955]"
+                    : "text-gray-600 bg-slate-200"
+                }`}
+                onClick={() => setActiveTab(item.id)}
+              >
+                {item.title}
+              </button>
+            ))}
           </div>
 
           {activeTab === "tab1" && (
