@@ -32,19 +32,19 @@ const NewsFeedCard = () => {
         <img src={Post} alt="" className="rounded-md h-96 w-full" />
       </div>
       <div className="flex items-center justify-between pt-6">
-        <div className="space-x-3 flex">
-          <button className="border rounded-md p-2 flex items-center gap-1">
+        <div className="space-x-1 md:space-x-3 flex">
+          <button className="text-xs md:text-lg border rounded-md p-1 md:p-2 flex items-center gap-1">
             <AiOutlineLike /> Agree
           </button>
-          <button className="border rounded-md p-2 flex items-center gap-1">
+          <button className="text-xs md:text-lg border rounded-md p-1 md:p-2 flex items-center gap-1">
             <AiOutlineDislike /> Disagree
           </button>
-          <button className="border rounded-md p-2 flex items-center gap-1">
+          <button className="text-xs md:text-lg border rounded-md p-1 md:p-2 flex items-center gap-1">
             <FaRegCommentDots /> Comments
           </button>
         </div>
         <div>
-          <button className="border rounded-md p-2 flex items-center gap-1">
+          <button className="text-xs md:text-lg border rounded-md p-1 md:p-2 flex items-center gap-1">
             <IoShareSocialOutline /> Share
           </button>
         </div>
