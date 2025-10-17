@@ -1,11 +1,13 @@
 import React from "react";
+import { SearchResultController } from "../search-result.controller";
 const SearchBar: React.FC = () => {
+  const {searchQuery,filteredResults} = SearchResultController()
   return (
     <div className="w-full py-6">
       {/* Header */}
-      <h2 className="text-3xl mb-4">
-        <span className="font-bold">740</span> Employees with{" "}
-        <span className="font-bold">"Hasan"</span> in their name
+      <h2 className="text-2xl mb-4">
+        <span className="font-bold">{filteredResults.length}</span> Employees with{" "}
+        <span className="font-bold">{searchQuery}</span> in their name
       </h2>
 
       {/* Filters */}

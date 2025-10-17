@@ -4,8 +4,12 @@ import { CiBookmark } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { RouteUrl } from "../../../router/url";
+import { useParams } from "react-router-dom";
+import {users} from "../../../../constants/data"
 
 const Profile: React.FC = () => {
+    const {id} = useParams()
+   const findUser = users.find((user)=>user.id === Number(id))
   return (
     <div className="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row gap-6">
       <div>
@@ -21,21 +25,20 @@ const Profile: React.FC = () => {
         <div className="md:flex items-center justify-between">
           <div>
             <div className="flex space-x-3 items-center">
-              <h2 className="text-3xl font-bold">Rakibul Hasan</h2>
+              <h2 className="text-3xl font-bold">{findUser?.name}</h2>
               <CiBookmark size={24} color="#4B465C" />
             </div>
             <p className="text-gray-600">
-              Works at <span className="font-bold">Codex IT</span> as Manager
+              Works at <span className="font-bold">{findUser?.currentRole}</span>
             </p>
             <p className="text-gray-600">
-              Worked at <span className="font-bold">Mahasagor IT Solution</span>{" "}
-              as Frontend Developer
+              Worked at <span className="font-bold">{findUser?.previousCompany}</span>{" "}
+              as {findUser?.previousRole}
             </p>
           </div>
           <div>
             <div className="bg-[#22C55E] text-white px-4 py-2 md:text-2xl text-xl font-bold rounded">
-              {" "}
-              4.5/5
+              {findUser?.rating}
             </div>
           </div>
         </div>

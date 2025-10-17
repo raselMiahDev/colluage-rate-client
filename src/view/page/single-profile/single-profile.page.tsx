@@ -6,8 +6,6 @@ import PageWrapper from "../../components/layout/page-wrapper";
 import ContainerSectionWrapper from "../../components/layout/container-section-wrapper.comp";
 import SocialMedia from "../../components/common/social-media";
 import HelmetCon from "../../components/common/helmet-con";
-// import SocialLink from "./components/social-link";
-
 const SingleProfilePage: React.FC = () => {
   return (
     <PageWrapper>

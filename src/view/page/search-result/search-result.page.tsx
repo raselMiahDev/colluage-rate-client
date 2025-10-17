@@ -7,7 +7,6 @@ import { SearchResultController } from "./search-result.controller";
 
 export default function SearchResultPage() {
   const { filteredResults } = SearchResultController();
-  console.log(filteredResults);
   return (
     <PageWrapper>
       <HelmetCon title="Search Result" />

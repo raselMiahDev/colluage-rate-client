@@ -31,24 +31,9 @@ const Story = () => {
       image: Image,
       name: "Adventure",
     },
-    {
-      id: 7,
-      image: Image,
-      name: "Nature",
-    },
-    {
-      id: 8,
-      image: Image,
-      name: "challenge",
-    },
-    {
-      id: 9,
-      image: Image,
-      name: "Travel",
-    },
   ];
   return (
-    <div className="flex item-center gap-3 overflow-hidden">
+    <div className="flex item-center gap-3 overflow-scroll">
       {data.map((item) => (
         <div
           key={item.id}

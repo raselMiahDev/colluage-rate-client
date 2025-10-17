@@ -5,7 +5,7 @@ export const RouteUrl = {
     LOGIN: "/login",
     SIGN_UP: "/sign-up",
     SEARCH_RESULT: "/search-result",
-    SINGLE_PROFILE: "/single-profile",
+    SINGLE_PROFILE: "/single-profile/:id",
     RATING: "/rating",
     REPORT: "/report",
     ABOUT_YOU: "/about-you",

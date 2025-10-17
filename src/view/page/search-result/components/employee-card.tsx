@@ -3,18 +3,11 @@ import { BsSave2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { RouteUrl } from "../../../router/url";
 import Avater from "../../../../assets/avater.svg";
-type EmployeeCardProps = {
-  name: string;
-  currentRole: string;
-  company: string;
-  previousRole: string;
-  previousCompany: string;
-  rating: number;
-  reviews: number;
-  attributes: string[];
-};
+import { ToastContainer, toast } from 'react-toastify';
+import { EmployeeCardProps } from "../../../../@types/profile.type";
 
 const EmployeeCard: React.FC<EmployeeCardProps> = ({
+  id,
   name,
   currentRole,
   company,
@@ -36,7 +29,7 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
         </div>
       </div>
       <div className="flex-1 md:ml-4">
-        <Link to={RouteUrl.SINGLE_PROFILE} className="text-lg font-bold">
+        <Link to={`/single-profile/${id}`} className="text-lg font-bold hover:underline">
           {name}
         </Link>
         <p className="text-sm text-gray-600">
@@ -61,10 +54,11 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({
         <div className="mt-5">
           <button className="bg-slate-100 border-2 p-2 rounded-lg flex items-center justify-center gap-2 w-full ">
             <BsSave2 />
-            <span>Save</span>
+            <span onClick={()=>  toast("Successfully Saved")}>Save</span>
           </button>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 };
