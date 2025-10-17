@@ -64,6 +64,7 @@ export default function UserProfilePage() {
           {activeTab === "tab3" && (
             <div className="max-w-5xl">
               <EmployeeCard
+              id={1}
                 name="Rasel Kibria"
                 currentRole="developer"
                 company="Abc"

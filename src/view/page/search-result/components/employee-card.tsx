@@ -1,7 +1,6 @@
 import React from "react";
 import { BsSave2 } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { RouteUrl } from "../../../router/url";
 import Avater from "../../../../assets/avater.svg";
 import { ToastContainer, toast } from 'react-toastify';
 import { EmployeeCardProps } from "../../../../@types/profile.type";
