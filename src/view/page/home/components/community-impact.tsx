@@ -1,4 +1,6 @@
-import Image from "../../../../assets/home/image/community.svg";
+import { Link } from "react-router-dom";
+import { ImageConstants } from "../../../../constants/image.constants";
+import { RouteUrl } from "../../../router/url";
 const CommunityImpact = () => {
   return (
     <section className="bg-white py-12 px-4">
@@ -10,13 +12,13 @@ const CommunityImpact = () => {
             feedback on peers and supervisors, you contribute to a workplace
             that values respect, collaboration, and growth.
           </p>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+          <Link to={RouteUrl.COMMUNITY} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
             Join Community
-          </button>
+          </Link>
         </div>
         <div className="flex justify-center">
           <img
-            src={Image}
+            src={ImageConstants.Community}
             alt="Community Impact"
             className="rounded-lg shadow-lg"
           />

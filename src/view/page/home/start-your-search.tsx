@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { RouteUrl } from "../../router/url";
 export default function StartYourSearch() {
   return (
     <div className="bg-gray-200 py-8">
@@ -9,7 +10,7 @@ export default function StartYourSearch() {
           are saying about their colleague today.
         </p>
         <Link
-          to="/signup"
+          to={RouteUrl.SIGN_UP}
           className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
         >
           Sign Up Now

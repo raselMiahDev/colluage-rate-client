@@ -10,5 +10,6 @@ export const RouteUrl = {
     REPORT: "/report",
     ABOUT_YOU: "/about-you",
     PROFILE: "/profile",
+    ALL_PROFILE:"/all-profile",
     NOT_FOUND: "*",
 } as const
