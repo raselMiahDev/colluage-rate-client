@@ -15,7 +15,7 @@ import UserProfilePage from "../page/user-profile/user-profile.page";
 import NotFoundPage from "../page/not-found/not-found.page";
 import ProtectedRoute from "./protected.route";
 import CommunityPage from "../page/community/community.page";
-import AllProfilePage from "../page/all-profile/all-profile.page";
+import AllProfileController from "../page/all-profile/all-profile.controller";
 export default function RootRouter() {
   const location = useLocation();
   const { loading, setLoading } = useLoading();
@@ -47,7 +47,7 @@ export default function RootRouter() {
         <Route path={RouteUrl.PROFILE} element={<UserProfilePage />} />
         <Route path={RouteUrl.NOT_FOUND} element={<NotFoundPage />} />
         <Route path={RouteUrl.COMMUNITY} element={<CommunityPage />} />
-        <Route path={RouteUrl.ALL_PROFILE} element={<AllProfilePage/>}/>
+        <Route path={RouteUrl.ALL_PROFILE} element={<AllProfileController/>}/>
       </Routes>
     </>
   );
