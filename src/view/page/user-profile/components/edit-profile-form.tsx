@@ -1,7 +1,9 @@
+import { useAuthStore } from "../../../../store/user.store";
 import { MyInputWithRHF } from "../../../components/common/my-input.comp";
 import { UserProfileController } from "../user-profile.controller";
 
 const EditProfileForm = () => {
+  const user = useAuthStore()
   const { control, handleSubmit, isSubmitting } = UserProfileController();
   return (
     <div className="space-y-4">
@@ -13,7 +15,8 @@ const EditProfileForm = () => {
           name="email"
           label="Email"
           type="email"
-          placeholder="usermail@gmail.com"
+          placeholder={user.user?.email || "Enter your email"}
+          value={user.user?.email}
           control={control}
         />
         <MyInputWithRHF

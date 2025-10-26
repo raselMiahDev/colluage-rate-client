@@ -2,6 +2,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import ContainerSectionWrapper from "../layout/container-section-wrapper.comp";
 const SocialMedia = () => {
   const socialMedia = [
     {
@@ -30,7 +31,7 @@ const SocialMedia = () => {
     },
   ];
   return (
-    <div className="flex items-center justify-center space-x-2 md:space-x-5">
+          <div className="flex items-center space-x-1 md:space-x-3 px-6 md:px-0">
       {socialMedia.map((social) => (
         <a
           href={social.link}

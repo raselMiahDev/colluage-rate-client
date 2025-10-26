@@ -1,17 +1,16 @@
-import Avater from "../../../../assets/avater.svg";
 import { CiBookmark } from "react-icons/ci";
 import { FaEdit } from "react-icons/fa";
 import SocialMedia from "../../../components/common/social-media";
 import EditProfileForm from "./edit-profile-form";
 import { useAuthStore } from "../../../../store/user.store";
+
 const MyProfile = () => {
   const { user } = useAuthStore();
-  console.log(user);
   return (
     <div className="bg-white gap-7 border rounded-lg p-6">
       <div className="grid md:grid-cols-5">
         <div className="col-span-1">
-          <img src={Avater} alt="profile" />
+          <img src={user?.picture} alt="profile" width={130} className="rounded-full p-1 border-2 border-[#006BFF]"/>
         </div>
         <div className="space-y-4 col-span-4">
           <div className="flex items-center justify-between">
@@ -37,7 +36,7 @@ const MyProfile = () => {
           </div>
           {/* Edit Profile form  */}
           <div>
-            <EditProfileForm />
+            <EditProfileForm/>
           </div>
         </div>
       </div>

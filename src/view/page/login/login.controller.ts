@@ -25,7 +25,7 @@ export const LoginController = () => {
                 picture: decoded.picture || "",
                 sub: decoded.sub || ""
             });
-            navigate(RouteUrl.HOME, { replace: true });
+            navigate(RouteUrl.RATING, { replace: true });
             // window.location.reload();
         },
         onError: () => {

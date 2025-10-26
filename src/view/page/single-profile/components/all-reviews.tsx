@@ -6,6 +6,8 @@ import RatingCard from "./rating-card";
 import { FaStar } from "react-icons/fa";
 //import ContainerSectionWrapper from "../../../components/layout/container-section-wrapper.comp";
 import FullSectionWrapper from "./../../../components/layout/full-section-wrapper";
+import { Link } from "react-router-dom";
+import { RouteUrl } from "../../../router/url";
 
 const AllReviews: React.FC = () => {
   const reviews = [
@@ -34,7 +36,7 @@ const AllReviews: React.FC = () => {
   ];
 
   return (
-    <FullSectionWrapper className="px-10 md:px-0">
+    <FullSectionWrapper className="px-6 md:px-0">
       <div className="md:flex justify-between items-center space-y-5">
         <span className="text-xl md:text-2xl font-bold border-b-2 border-black">
           10 Reviews
@@ -98,7 +100,9 @@ const AllReviews: React.FC = () => {
                       <button className="hover:underline">Doubtful</button>
                     </div>
                   </div>
-                  <CiSquareInfo size={25} />
+                  <Link to={RouteUrl.REPORT}>
+                    <CiSquareInfo size={25} />
+                  </Link>
                 </div>
               </div>
             </div>

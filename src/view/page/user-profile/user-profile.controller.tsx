@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { toast } from "react-toastify"
 import { EditProfileWithSchema, IEditProfileWithSchema } from "../../../service/user-profile/ProfileSchema"
 
 export const UserProfileController = ()=>{
@@ -20,7 +19,6 @@ export const UserProfileController = ()=>{
         try {
             console.log("Signup successful:", data) // Display success message
             // const response = await axios.post("/api/payment/signup", data);
-            toast.success("Signup successful!")
         } catch (error) {
             console.error("Signup Error:", error) // Log error
         }

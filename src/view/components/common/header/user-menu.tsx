@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { RouteUrl } from "../../../router/url";
 import { useAuthStore } from "../../../../store/user.store";
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,17 +38,7 @@ const UserMenu = () => {
           )}
         </div>
       ) : (
-        <>
-          <div className="flex items-center space-x-5 md:flex">
-            <Link to={RouteUrl.LOGIN}>Log In</Link>
-            <Link
-              to={RouteUrl.SIGN_UP}
-              className="bg-blue-600 hover:bg-blue-700 p-1 md:py-2 md:px-5 rounded md:rounded-lg text-white"
-            >
-              Sign Up
-            </Link>
-          </div>
-        </>
+        null
       )}
     </div>
   );
