@@ -1,6 +1,5 @@
 import { ImageConstants } from "../../../../constants/image.constants";
 import { EmployeeCardProps } from "../../../../@types/profile.type";
-import { Link } from "react-router-dom";
 import Button from "../../../components/ui/Button";
 
 export default function Card(props:EmployeeCardProps){

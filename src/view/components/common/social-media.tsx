@@ -1,37 +1,7 @@
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import ContainerSectionWrapper from "../layout/container-section-wrapper.comp";
+import { socialMedia } from "../../../constants/socialMedia";
 const SocialMedia = () => {
-  const socialMedia = [
-    {
-      id: "1",
-      name: "Facebook",
-      icon: <FaFacebook />,
-      link: "www.facebook.com",
-    },
-    {
-      id: "3",
-      name: "Linkedin",
-      icon: <FaLinkedin />,
-      link: "www.linkedin.com",
-    },
-    {
-      id: "4",
-      name: "Twitter",
-      icon: <FaTwitter />,
-      link: "www.twitter.com",
-    },
-    {
-      id: "6",
-      name: "Youtube",
-      icon: <FaYoutube />,
-      link: "www.youtube.com",
-    },
-  ];
   return (
-          <div className="flex items-center space-x-1 md:space-x-3 px-6 md:px-0">
+    <div className="flex items-center space-x-1 md:space-x-3 px-6 md:px-0">
       {socialMedia.map((social) => (
         <a
           href={social.link}
