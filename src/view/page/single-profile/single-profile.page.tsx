@@ -12,18 +12,25 @@ const SingleProfilePage: React.FC = () => {
       <HelmetCon title="Profile" />
       <div className="bg-slate-100">
         <ContainerSectionWrapper>
+          <div className="md:grid md:grid-cols-12 gap-6 mb-6">
+            <div className="col-span-8">
+              <Profile />
+            </div>
+            <div className="col-span-4">
+               <ReviewsAndRatings />
+            </div>
+          </div>
+
           <div className="md:grid-cols-3 gap-6">
             <div className="md:col-span-2">
               <div className="space-y-6">
-                <Profile />
+               
                 <SocialMedia />
                 <AllReviews />
               </div>
             </div>
-            <div className="md:col-span-1">
-              <ReviewsAndRatings />
-            </div>
           </div>
+
         </ContainerSectionWrapper>
       </div>
     </PageWrapper>

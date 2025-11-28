@@ -14,14 +14,14 @@ export default function AllProfileController() {
 
   const filteredUsers = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return users;
-    return users.filter((u) => {
+    const filtered = !q ? users : users.filter((u) => {
       return (
         u.name.toLowerCase().includes(q) ||
         u.currentRole.toLowerCase().includes(q) ||
         u.company.toLowerCase().includes(q)
       );
     });
+    return filtered.filter((u) => u.image !== undefined);
   }, [query]);
 
   // debounce to show loader briefly during searches

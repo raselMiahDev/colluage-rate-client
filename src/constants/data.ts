@@ -2,6 +2,7 @@ export const users = [
   {
     id: 1,
     name: "John Doe",
+    image:"https://i.pravatar.cc/150?img=1" ,
     currentRole: "IT Manager",
     company: "Codex IT",
     previousRole: "Frontend Developer",
@@ -13,6 +14,7 @@ export const users = [
   {
     id: 2,
     name: "Jane smith",
+    image:"https://i.pravatar.cc/150?img=2" ,
     company: "Microsoft",
     currentRole: "IT Manager",
     previousRole: "Frontend Developer",
@@ -24,6 +26,7 @@ export const users = [
   {
     id: 3,
     name: "Alice Johnson",
+    image:"https://i.pravatar.cc/150?img=3" ,
     company: "Amazon",
     currentRole: "IT Manager",
     previousRole: "Frontend Developer",
@@ -35,6 +38,7 @@ export const users = [
   {
     id: 4,
     name: "Rasel Kibria",
+    image:"https://i.pravatar.cc/150?img=4" ,
     company: "Impress Newtex",
     currentRole: "IT Manager",
     previousRole: "Frontend Developer",
@@ -46,6 +50,7 @@ export const users = [
   {
     id: 5,
     name: "Adnan Hossain Muhid",
+    image:"https://i.pravatar.cc/150?img=5" ,
     company: "Impress Newtex",
     currentRole: "IT Manager",
     previousRole: "Frontend Developer",
@@ -57,6 +62,7 @@ export const users = [
   {
     id: 6,
     name: "Md Jamal Uddin",
+    image:"https://i.pravatar.cc/150?img=6" ,
     company: "Scandex pvt ltd",
     currentRole: "IT Manager",
     previousRole: "Frontend Developer",
@@ -68,6 +74,7 @@ export const users = [
   {
     id: 7,
     name: "John Doe",
+    image:"https://i.pravatar.cc/150?img=7" ,
     currentRole: "IT Manager",
     company: "Codex IT",
     previousRole: "Frontend Developer",
@@ -79,6 +86,7 @@ export const users = [
   {
     id: 8,
     name: "Sarah Ahmed",
+    image:"https://i.pravatar.cc/150?img=8" ,
     currentRole: "UI/UX Designer",
     company: "PixelCraft Studio",
     previousRole: "Graphic Designer",
@@ -90,6 +98,7 @@ export const users = [
   {
     id: 9,
     name: "Michael Lee",
+    image:"https://i.pravatar.cc/150?img=9" ,
     currentRole: "Full Stack Developer",
     company: "TechNova",
     previousRole: "Backend Developer",
@@ -101,6 +110,7 @@ export const users = [
   {
     id: 10,
     name: "Emily Carter",
+    image:"https://i.pravatar.cc/150?img=10" ,
     currentRole: "Project Manager",
     company: "NextGen Systems",
     previousRole: "Assistant PM",
@@ -112,6 +122,7 @@ export const users = [
   {
     id: 11,
     name: "David Johnson",
+    image:"https://i.pravatar.cc/150?img=11" ,
     currentRole: "Software Engineer",
     company: "CodeBase Ltd.",
     previousRole: "Intern Developer",
@@ -123,6 +134,7 @@ export const users = [
   {
     id: 12,
     name: "Ayesha Khan",
+    image:"https://i.pravatar.cc/150?img=12" ,
     currentRole: "Frontend Developer",
     company: "WebVerse",
     previousRole: "UI Developer",
@@ -134,6 +146,7 @@ export const users = [
   {
     id: 13,
     name: "Liam Smith",
+    image:"https://i.pravatar.cc/150?img=13" ,
     currentRole: "Data Analyst",
     company: "InsightPro",
     previousRole: "Research Assistant",
@@ -145,6 +158,7 @@ export const users = [
   {
     id: 14,
     name: "Sophia Brown",
+    image:"https://i.pravatar.cc/150?img=14" ,
     currentRole: "Marketing Specialist",
     company: "Brandify Media",
     previousRole: "Content Writer",
@@ -156,6 +170,7 @@ export const users = [
   {
     id: 15,
     name: "Noah Wilson",
+    image:"https://i.pravatar.cc/150?img=15" ,
     currentRole: "DevOps Engineer",
     company: "CloudSphere",
     previousRole: "System Administrator",
@@ -167,6 +182,7 @@ export const users = [
   {
     id: 16,
     name: "Olivia Martin",
+    image:"https://i.pravatar.cc/150?img=16" ,
     currentRole: "QA Engineer",
     company: "TestHub",
     previousRole: "Manual Tester",
@@ -178,6 +194,7 @@ export const users = [
   {
     id: 17,
     name: "Ethan Walker",
+    image:"https://i.pravatar.cc/150?img=17" ,
     currentRole: "Product Manager",
     company: "Innovento",
     previousRole: "Business Analyst",
@@ -189,6 +206,7 @@ export const users = [
   {
     id: 18,
     name: "Isabella Garcia",
+    image:"https://i.pravatar.cc/150?img=18" ,
     currentRole: "HR Executive",
     company: "PeopleFirst",
     previousRole: "Recruiter",
@@ -200,6 +218,7 @@ export const users = [
   {
     id: 19,
     name: "William Scott",
+    image:"https://i.pravatar.cc/150?img=19" ,
     currentRole: "Backend Developer",
     company: "CodeStream",
     previousRole: "Junior Developer",
@@ -211,6 +230,7 @@ export const users = [
   {
     id: 20,
     name: "Mia Robinson",
+    image:"https://i.pravatar.cc/150?img=20" ,
     currentRole: "SEO Expert",
     company: "RankBoost",
     previousRole: "Digital Marketer",
@@ -222,6 +242,7 @@ export const users = [
   {
     id: 21,
     name: "James Anderson",
+    image:"https://i.pravatar.cc/150?img=21" ,
     currentRole: "Cybersecurity Analyst",
     company: "SecureNet",
     previousRole: "Network Engineer",

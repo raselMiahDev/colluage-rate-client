@@ -20,7 +20,7 @@ export default function HeaderOne() {
         isScrolled ? "fixed top-0 left-0 w-full bg-white shadow-lg" : "relative"
       }`}
     >
-      <div className=" flex items-center justify-between px-5 md:px-40 py-3 dark:border-gray-700">
+      <div className=" flex items-center justify-between px-5 md:px-10 py-3 dark:border-gray-700">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <div>
@@ -45,9 +45,21 @@ export default function HeaderOne() {
           ))}
         </nav>
 
-        <div>
-          <UserMenu />
-        </div>
+        {user?.email_verified === true ? (
+          <div>
+            <UserMenu />
+          </div>
+        ) : (
+          <div className="flex items-center space-x-5 md:flex">
+            <Link to={RouteUrl.LOGIN}>Log In</Link>
+            <Link
+              to={RouteUrl.SIGN_UP}
+              className="bg-blue-600 hover:bg-blue-700 p-1 md:py-2 md:px-5 rounded md:rounded-lg text-white"
+            >
+              Sign Up
+            </Link>
+          </div>
+        )}
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -101,7 +113,24 @@ export default function HeaderOne() {
         <nav className="flex flex-col space-y-4 p-4 items-center">
           {user?.email_verified === true ? (
             <div>
-              <img src={user?.picture} alt="" />
+              <ul>
+                {routes.map((route) => (
+                  <li className="py-3">
+                    <NavLink
+                      key={route.id}
+                      to={route.path}
+                      className={({ isActive }) =>
+                        isActive
+                          ? "rounded-full bg-blue-400 text-white px-4 py-2"
+                          : "border px-4 text-md py-2 rounded-full hover:text-gray-300"
+                      }
+                      onClick={toggleMenu} // Close the menu on link click
+                    >
+                      {route.name}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
             </div>
           ) : (
             <ul>
@@ -121,16 +150,6 @@ export default function HeaderOne() {
                   </NavLink>
                 </li>
               ))}
-
-              <div className="flex items-center space-x-5 md:flex">
-                <Link to={RouteUrl.LOGIN}>Log In</Link>
-                <Link
-                  to={RouteUrl.SIGN_UP}
-                  className="bg-blue-600 hover:bg-blue-700 p-1 md:py-2 md:px-5 rounded md:rounded-lg text-white"
-                >
-                  Sign Up
-                </Link>
-              </div>
             </ul>
           )}
         </nav>

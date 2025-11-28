@@ -17,5 +17,6 @@ export const useAuthStore = create<AuthState>((set) => ({
     logout: () => {
         localStorage.removeItem("user");
         set({ user: null })
+        window.location.href = "/";
     }
 }))

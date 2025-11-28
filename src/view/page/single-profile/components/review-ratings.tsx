@@ -3,10 +3,10 @@ const ReviewsAndRatings: React.FC = () => {
   return (
     <div>
       <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-2xl font-bold">Reviews & Ratings</h3>
+        <h3 className="text-xl font-bold">Reviews & Ratings</h3>
         <div>
-          <div className="flex space-x-3 items-center border-b border-slate-400 py-7">
-            <h4 className="text-4xl font-bold">4.5</h4>
+          <div className="flex space-x-3 items-center border-b border-slate-400 py-2">
+            <h4 className="text-xl font-bold">4.5</h4>
             <div>
               <p className="text-gray-600">Based on 10 reviews</p>
             </div>
