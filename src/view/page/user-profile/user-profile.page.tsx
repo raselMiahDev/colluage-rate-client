@@ -66,6 +66,7 @@ export default function UserProfilePage() {
               <EmployeeCard
               id={1}
                 name="Rasel Kibria"
+                image=""
                 currentRole="developer"
                 company="Abc"
                 previousRole="xzy"
